@@ -1,0 +1,131 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #222;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('../images/mainImg.jpg') center / cover no-repeat;
+    position: relative;
+}
+
+/* NAV */
+.nav {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #222;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 22px;
+    height: 2px;
+    background: #222;
+    margin: 4px 0;
+}
+
+/* HERO TEXT */
+.hero-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3.5rem;
+    color: white;
+}
+
+.hero-text p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: white;
+}
+
+/* SECTIONS */
+.section {
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+}
+
+.section p {
+    line-height: 1.9;
+    font-size: 0.95rem;
+    text-align: justify;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .nav {
+        right: 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        inset: 0;
+        background: rgba(255,255,255,0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transform: translateX(100%);
+        transition: 0.3s;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+}
