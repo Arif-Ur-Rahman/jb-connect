@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Design Match</title>
     <link rel="stylesheet" href="css/style.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
@@ -12,28 +13,38 @@
   </head>
   <body>
     <header class="header">
-      <!-- NAV IN WHITE SPACE -->
-      <nav class="nav">
-        <ul>
-          <li><a href="#">TOP</a></li>
-          <li><a href="#">VISION</a></li>
-          <li><a href="#">MESSAGE</a></li>
-          <li><a href="#">SERVICE</a></li>
-          <li><a href="#">STORY</a></li>
-          <li><a href="#">PROFILE</a></li>
-        </ul>
-      </nav>
 
-      <!-- HERO IMAGE CENTERED -->
-      <div class="hero-wrapper">
-        <div class="hero">
-          <div class="hero-text">
-            <h1>Vestibulum mauris</h1>
-            <p>最新技術と自然との調和を目指す</p>
-          </div>
-        </div>
+  <!-- HAMBURGER (MOBILE ONLY) -->
+  <div id="hamburger" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="navLinks">
+    <ul>
+      <li><a href="#">TOP</a></li>
+      <li><a href="#">VISION</a></li>
+      <li><a href="#">MESSAGE</a></li>
+      <li><a href="#">SERVICE</a></li>
+      <li><a href="#">STORY</a></li>
+      <li><a href="#">PROFILE</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero-wrapper">
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Vestibulum mauris</h1>
+        <p>最新技術と自然との調和を目指す</p>
       </div>
-    </header>
+    </div>
+  </div>
+
+</header>
+
     <section class="vision">
       <div class="container">
         <h2>VISION</h2>
@@ -206,5 +217,6 @@
         <a href="http://rf-tpl.com" target="_blank">https://f-tpl.com</a>
       </p>
     </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>
