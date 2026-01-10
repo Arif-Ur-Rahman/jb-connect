@@ -436,44 +436,72 @@ body {
 
 
 /* RESPONSIVE */
-/* =========================
-   MOBILE (PDF MATCH)
-========================= */
+
 @media (max-width: 768px) {
 
-  /* ---------- HEADER / NAV ---------- */
-   .hamburger {
-    display: block;
-  }
+  @media (max-width: 768px) {
 
-  /* NAV OVERLAY (TOP → DOWN) */
+  /* ===== NAV OVERLAY ===== */
   .nav {
     position: fixed;
-    top: -100%;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100vh;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: top 0.4s ease;
+    background: rgba(255, 255, 255, 0.96);
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
     z-index: 999;
+    padding-top: 70px;
   }
 
   .nav.active {
-    top: 0;
+    transform: translateY(0);
   }
 
+  /* ===== MENU LIST ===== */
   .nav ul {
-    flex-direction: column;
-    gap: 30px;
+    display: block;        /* IMPORTANT */
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
-  .nav a {
-    font-size: 16px;
-    letter-spacing: 2px;
+  .nav ul li {
+    border-bottom: 1px solid #ddd;
   }
+
+  .nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 22px 24px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #333;
+    text-decoration: none;
+  }
+
+  /* Arrow (LEFT) */
+  .nav ul li a::before {
+    content: "›";
+    font-size: 18px;
+    transform: translateY(-1px);
+  }
+
+  /* ===== HAMBURGER / CLOSE ===== */
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 22px;
+    right: 22px;
+    z-index: 1000;
+  }
+
+  .hamburger span {
+    background: #333;
+  }
+}
+
 
   /* HERO */
   .hero {
